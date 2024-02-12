@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DefaultCRUDGRX.DAL.Models
+﻿namespace DefaultCRUDGRX.DAL.Models
 {
     public class ToDo
     {

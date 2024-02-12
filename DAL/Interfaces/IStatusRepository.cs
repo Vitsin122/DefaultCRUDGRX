@@ -6,6 +6,6 @@ namespace DefaultCRUDGRX.DAL.Interfaces
 {
     public interface IStatusRepository
     {
-
+        
     }
 }
