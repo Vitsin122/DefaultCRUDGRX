@@ -8,7 +8,7 @@ namespace DefaultCRUDGRX.BL.Interfaces
 {
     public interface ITodoService
     {
-        Task<int> DeleteTodo(ToDoDTO modelDTO);
+        Task<int> DeleteTodoAsync(ToDoDTO modelDTO);
         Task<ICollection<ToDoDTO>> GetAllToDoAsync();
         Task<ToDoDTO> GetToDoByNameAsync(string name);
         Task<int> CreateToDoAsync(ToDoDTO modelDTO);
