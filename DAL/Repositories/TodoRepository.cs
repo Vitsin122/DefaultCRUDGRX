@@ -27,9 +27,9 @@ namespace DefaultCRUDGRX.DAL.Repositories
             return await _context.ToDos.ToListAsync();
         }
 
-        public async Task<ToDo> GetByName(string name)
+        public async Task<ToDo?> GetByName(string name)
         {
-            return await _context.ToDos.FirstOrDefaultAsync(u => u.Name == name) ?? new ToDo();
+            return await _context.ToDos.FirstOrDefaultAsync(u => u.Name == name);
         }
 
         public async Task<int> Update(ToDo model)

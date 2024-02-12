@@ -1,4 +1,8 @@
-﻿namespace DefaultCRUDGRX.DAL.DTO
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DefaultCRUDGRX.BL.DTO
 {
     public class ToDoDTO
     {

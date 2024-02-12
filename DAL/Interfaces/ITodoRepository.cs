@@ -7,7 +7,7 @@ namespace DefaultCRUDGRX.DAL.Interfaces
     public interface ITodoRepository
     {
         Task<ICollection<ToDo>> GetAll();
-        Task<ToDo> GetByName(string name);
+        Task<ToDo?> GetByName(string name);
         Task<int> Delete(ToDo name);
         Task<int> Update(ToDo model);
     }
