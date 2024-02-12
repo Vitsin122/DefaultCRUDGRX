@@ -44,6 +44,8 @@ namespace DefaultCRUDGRX.DAL.Context
             modelBuilder.Entity<ToDo>().Property(u => u.Description)
                 .IsRequired();
 
+            modelBuilder.Entity<ToDo>().HasAlternateKey(u => u.Name);
+
 
             modelBuilder.Entity<Status>()
                 .ToTable("Statuses")
@@ -55,6 +57,8 @@ namespace DefaultCRUDGRX.DAL.Context
 
             modelBuilder.Entity<Status>().Property(u => u.Status_Name)
                 .IsRequired();
+
+            modelBuilder.Entity<Status>().HasAlternateKey(u => u.Status_Name);
 
             modelBuilder.Entity<Status>()
                 .HasData( new Status { Status_Name = "Создана"},

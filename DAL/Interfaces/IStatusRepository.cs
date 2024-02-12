@@ -8,7 +8,7 @@ namespace DefaultCRUDGRX.DAL.Interfaces
 {
     public interface IStatusRepository
     {
-        Task<Status?> GetStatusByName(string name);
-        Task<ICollection<Status>> GetAll();
+        Task<Status?> GetStatusByNameAsync(string name);
+        Task<ICollection<Status>> GetAllAsync();
     }
 }

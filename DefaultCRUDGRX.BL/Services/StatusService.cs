@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DefaultCRUDGRX.BL.Interfaces
+namespace DefaultCRUDGRX.BL.Services
 {
-    public interface ICRUDService
+    public class StatusService
     {
 
     }
