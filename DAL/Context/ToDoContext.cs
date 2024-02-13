@@ -13,13 +13,13 @@ namespace DefaultCRUDGRX.DAL.Context
 
         public ToDoContext()
         {
-            Database.EnsureDeleted();
+            
             Database.EnsureCreated();
         }
         public ToDoContext(DbContextOptions<ToDoContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
+            
             Database.EnsureCreated();
         }
 
@@ -61,9 +61,9 @@ namespace DefaultCRUDGRX.DAL.Context
             modelBuilder.Entity<Status>().HasAlternateKey(u => u.Status_Name);
 
             modelBuilder.Entity<Status>()
-                .HasData( new Status { Status_ID=0,Status_Name = "Создана"},
-                          new Status { Status_ID=1,Status_Name = "В работе"},
-                          new Status { Status_ID=2,Status_Name = "Завершена"}
+                .HasData( new Status { Status_ID=1,Status_Name = "Создана"},
+                          new Status { Status_ID=2,Status_Name = "В работе"},
+                          new Status { Status_ID=3,Status_Name = "Завершена"}
                  );
             
         }
