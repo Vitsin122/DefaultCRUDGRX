@@ -13,16 +13,18 @@ namespace DefaultCRUDGRX.DAL.Context
 
         public ToDoContext()
         {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
         public ToDoContext(DbContextOptions<ToDoContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Vitsin\\source\\repos\\DefaultCRUDGRX\\DAL\\TestDB.mdf;Integrated Security=True");
+            base.OnConfiguring(optionsBuilder);
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ToDo>()
@@ -61,9 +63,9 @@ namespace DefaultCRUDGRX.DAL.Context
             modelBuilder.Entity<Status>().HasAlternateKey(u => u.Status_Name);
 
             modelBuilder.Entity<Status>()
-                .HasData( new Status { Status_Name = "Создана"},
-                          new Status { Status_Name = "В работе"},
-                          new Status { Status_Name = "Завершена"}
+                .HasData( new Status {Status_ID=1 ,Status_Name = "Создана"},
+                          new Status { Status_ID = 2, Status_Name = "В работе"},
+                          new Status { Status_ID = 3, Status_Name = "Завершена"}
                  );
             
         }
