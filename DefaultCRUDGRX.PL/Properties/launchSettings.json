@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64591",
-      "sslPort": 44334
+      "applicationUrl": "http://localhost:12474",
+      "sslPort": 44333
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CRUD.API": {
+    "DefaultCRUDGRX.PL": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
